@@ -1,0 +1,11 @@
+a{
+    text-decoration: none;
+}
+
+.fondo-header{
+    background-image: url("../assets/img-main/inventario.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat:repeat-x;
+    background-color: brown;
+}
