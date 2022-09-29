@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-09-2022 a las 19:12:26
+-- Tiempo de generación: 29-09-2022 a las 21:53:54
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -338,11 +338,8 @@ CREATE TABLE `detalleventa` (
 --
 
 INSERT INTO `detalleventa` (`idVenta`, `idProducto`, `cantidad`) VALUES
-(1, 5, 2),
-(1, 3, 6),
-(2, 5, 3),
-(2, 3, 4),
-(3, 3, 1);
+(4, 4, 1),
+(4, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -366,8 +363,12 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`idProducto`, `codigo`, `nombre`, `descripcion`, `stock`, `precioVenta`, `precioCompra`, `idCategoria`) VALUES
-(3, 'P14', 'Producto ', 'Prueba', '5.00', '5.00', '10.00', 6),
-(5, 'P16', 'Producto Peru', 'Prueba 2', '14.00', '78.00', '50.00', 6);
+(1, 'PRO001', 'REDMI POCO X3', 'EQUIPO MOVIL REDMI POCO X3', '10.00', '1000.00', '700.00', 6),
+(2, 'PRO002', 'SAMSUNG S10', 'EQUIPO MOVIL  SAMSUNG S10', '10.00', '1200.00', '800.00', 6),
+(3, 'PRO003', 'MOTO G', 'EQUIPO MOVIL MOTO G', '0.01', '800.50', '500.00', 6),
+(4, 'PRO004', 'Apple iPhone 12', 'Apple iPhone 12 64GB - Colores', '2.00', '3000.00', '2200.00', 6),
+(5, 'PRO005', 'Redmi Note 11 ', 'Redmi Note 11 4GB RAM 128GB ROM', '7.00', '1100.00', '900.00', 6),
+(6, 'PRO006', 'Xiaomi Redmi NOTE 11 PRO', 'Xiaomi Redmi NOTE 11 PRO 128gb Ram 6gb versión global DUAL SIM - GRIS', '8.00', '1500.00', '1000.00', 6);
 
 -- --------------------------------------------------------
 
@@ -486,9 +487,7 @@ CREATE TABLE `venta` (
 --
 
 INSERT INTO `venta` (`idVenta`, `codSerie`, `fecha`, `idCliente`, `idUsuario`, `subtotal`) VALUES
-(1, '', '2022-09-27', 1, 1, 186),
-(2, '', '2022-09-27', 1, 1, 254),
-(3, '', '2022-09-27', 1, 1, 5);
+(4, '', '2022-09-29', 7, 1, 4000);
 
 --
 -- Índices para tablas volcadas
@@ -604,7 +603,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `idVenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idVenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
