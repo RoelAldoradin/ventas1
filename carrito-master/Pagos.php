@@ -15,7 +15,7 @@ if ($cart->total_items() <= 0) {
 $_SESSION['sessCustomerID'] = 1;
 
 // get customer details by session customer ID
-$query = $db->query("SELECT * FROM cliente WHERE idCliente = 1");
+$query = $db->query("SELECT * FROM cliente WHERE idCliente = 7");
 $custRow = $query->fetch_assoc();
 ?>
 <!DOCTYPE html>
@@ -103,7 +103,7 @@ $custRow = $query->fetch_assoc();
                         <tr>
                             <td colspan="3"></td>
                             <?php if ($cart->total_items() > 0) { ?>
-                                <td class="text-center"><strong>Total <?php echo '$' . $cart->total() . ' COP'; ?></strong></td>
+                                <td class="text-center"><strong>Total <?php echo '$' . $cart->total() . ' SOLES'; ?></strong></td>
                             <?php } ?>
                         </tr>
                     </tfoot>

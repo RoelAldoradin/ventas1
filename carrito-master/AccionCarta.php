@@ -34,12 +34,12 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
         header("Location: VerCarta.php");
     }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['sessCustomerID'])){
         // insert order details into database
-        $insertOrder = $db->query("INSERT INTO venta (idVenta, idUsuario, idCliente, subtotal,fecha) VALUES ('',1,1, '".$cart->total()."', '".date("Y-m-d H:i:s")."')");
+        $insertOrder = $db->query("INSERT INTO venta (idVenta, idUsuario, idCliente, subtotal,fecha) VALUES ('',1,7, '".$cart->total()."', '".date("Y-m-d H:i:s")."')");
         
         if($insertOrder){
             $orderID = $db->insert_id;
             $sql = '';
-            // get cart items
+
             $cartItems = $cart->contents();
             foreach($cartItems as $item){
                 $sql .= "INSERT INTO detalleVenta (idVenta, idProducto, cantidad) VALUES ('".$orderID."', '".$item['idProducto']."', '".$item['cantidad']."');";

@@ -40,7 +40,5 @@ if($varsesion == null || $varsesion ==''){
     <div class = "container-md  mt-5 d-flex  justify-content-around ">
         <a href="../functions/close-session.php" class = "btn btn-danger mx-auto mt-5">CERRAR SESION</a>
     </div>
-    <h2 class = "text-center">DESARROLLADOS NUEVA VENTA - NUEVO USUARIO - CLIENTES - PRODUCTOS</h2>
-    <h2 class = "text-center">SE AH DESARROLADO EN CONTROL DE SESIONES EH IMPLEMENTADO EL MODULO VENTA AL 90% </h2>
 </body>
 </html>
